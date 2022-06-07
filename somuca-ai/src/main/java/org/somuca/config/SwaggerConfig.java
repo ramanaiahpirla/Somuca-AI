@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Configuration;
 
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.service.ApiInfo;
+import springfox.documentation.service.Contact;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
@@ -22,7 +23,7 @@ public class SwaggerConfig {
 		return new ApiInfoBuilder().title("Somuca APIs")
 				.description("Somuca API reference for developers")
 				.termsOfServiceUrl("http://somuca-ai.com")
-				.contact("somuca-ai@lfprojects.com").license("somuca License")
+				.contact(new Contact("Somuca DevTeam", "www.somukatheai.com", "somuca-ai@lfprojects.com")).license("somuca License")
 				.licenseUrl("somuca-ai@lfprojects.com").version("1.0").build();
 	}
 
