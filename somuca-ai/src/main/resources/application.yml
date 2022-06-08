@@ -8,7 +8,7 @@ spring:
     name: somuca
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://mysql:3306/somuca
+    url: jdbc:mysql://localhost:3306/somuca
     username: root
     password: root
   jpa:
