@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import io.swagger.annotations.ApiParam;
+
 @RestController
 @RequestMapping("/somuca")
 
@@ -22,9 +24,9 @@ public class SomucaController {
 	private MLPSolutionService mlpSolutionService;
 
 	@PostMapping("/createSolution")
-	public ResponseEntity<MLPSolution> createMLPSolution(@RequestBody MLPSolution mlp) {
+	public ResponseEntity<MLPSolution> createMLPSolution(@ApiParam(value = "MLPSolution Details") @RequestBody MLPSolution mlpSolution) {
 
-		return new ResponseEntity<MLPSolution>(mlpSolutionService.createMLPSolution(mlp), HttpStatus.OK);
+		return new ResponseEntity<MLPSolution>(mlpSolutionService.createMLPSolution(mlpSolution), HttpStatus.OK);
 
 	}
 

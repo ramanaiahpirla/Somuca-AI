@@ -1,5 +1,6 @@
 package org.somuca.service;
 
+import java.time.Instant;
 import java.util.List;
 
 import org.somuca.domain.MLPSolution;
@@ -16,6 +17,10 @@ public class MLPSolutionServiceImpl implements MLPSolutionService{
 
 	@Override
 	public MLPSolution createMLPSolution(MLPSolution mlp) {
+		mlp.setActive(true);
+		mlp.setLastDownload(Instant.now());
+		mlp.setViewCount(1L);
+		mlp.setDownloadCount(1L);
 		return mlpRepo.save(mlp);
 	}
 
