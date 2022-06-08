@@ -4,7 +4,7 @@ ENV TOMCAT_HOME=/u01/middleware/apache-tomcat-9.0.63
 ENV PATH=$PATH:$JAVA_HOME/bin:$TOMCAT_HOME/bin
 
 RUN mkdir -p /u01/middleware
-RUN mkdir -p /u01/middleware/covido
+RUN mkdir -p /u01/middleware/somuca-ai
 WORKDIR /u01/middleware
 
 ADD https://download.java.net/java/GA/jdk11/13/GPL/openjdk-11.0.1_linux-x64_bin.tar.gz .
@@ -19,7 +19,7 @@ RUN apt install -y net-tools
 RUN rm openjdk-11.0.1_linux-x64_bin.tar.gz
 RUN rm apache-tomcat-9.0.63.tar.gz
 
-COPY . ./covido
+COPY . ./somuca-ai
 COPY target/somuca-ai-0.0.1-SNAPSHOT.jar ${TOMCAT_HOME}/webapps
 COPY run.sh .
 RUN chmod u+x run.sh
