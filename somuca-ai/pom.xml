@@ -11,7 +11,7 @@
 	</parent>
 	<groupId>org.somuca</groupId>
 	<artifactId>somuca-ai</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0</version>
 	<name>somuca-ai</name>
 	<description>Somuca AI Platform</description>
 	<properties>
