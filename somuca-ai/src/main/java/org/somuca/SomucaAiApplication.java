@@ -6,6 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
 @SpringBootApplication
+@ComponentScan(basePackages = {"com.somuca"})
+@EnableJpaRepositories("com.somuca.repository")
 @EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
 public class SomucaAiApplication {
 
